@@ -452,23 +452,43 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   .nav-right{gap:0}
   .sec{padding:80px 0}
   
-  /* Mobile Hero specific adjustments for better image visibility */
-  .hero{padding: 90px 0 40px; align-items: flex-end;}
+  /* Mobile Stacking Hero - Image first, then Box */
+  .hero{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .hero-bg{
+    position: relative;
+    height: 55vh;
+    width: 100%;
+    flex: none;
+  }
+  .hero-bg img {
+    object-position: center 20%;
+  }
+  .hero > .wrap {
+    margin-top: -50px; /* Overlap the box nicely over the bottom of the image */
+    padding-bottom: 60px;
+    flex: 1;
+  }
   .hero-inner{
-    padding:24px 20px; 
-    border-radius:20px; 
+    padding:32px 24px; 
+    border-radius:24px; 
     max-width: 100%;
-    background: linear-gradient(135deg, rgba(250, 243, 224, 0.9) 0%, rgba(250, 243, 224, 0.65) 100%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-width: 0.5px;
+    background: rgba(250, 243, 224, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.08);
   }
   .hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); margin-bottom: 14px; }
   .hero-sub { font-size: 0.9rem; margin-bottom: 24px; }
   .hero-meta { margin-top: 24px; gap: 16px; }
   .hero-meta .m b { font-size: 1.3rem; }
   .hero-meta .m+.m{padding-left:16px}
-  .scrollcue { display: none; } /* Hide on mobile to save space */
+  .scrollcue { display: none; }
   
   .rev-top{flex-direction:column;align-items:flex-start}
   .gallery{grid-template-columns:1fr;grid-auto-rows:220px}
@@ -485,12 +505,10 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
 </head>
 <body>
 
-<!-- intro curtain -->
 <div id="curtain">
   <img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4488.jpg?raw=true" class="curtain-logo" alt="Χρυσούλα Οικονόμου Logo">
 </div>
 
-<!-- header -->
 <header id="header">
   <div class="wrap nav">
     <a href="#top" class="brand" aria-label="Χρυσούλα Οικονόμου">
@@ -521,7 +539,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </header>
 
-<!-- mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mm-top">
     <img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4488.jpg?raw=true" class="brand-logo-img" alt="Logo" style="height:48px;">
@@ -545,7 +562,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </div>
 
-<!-- hero -->
 <section class="hero" id="top">
   <div class="hero-bg"><img src="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-128.jpg?raw=true" alt="Γραφείο ψυχοθεραπείας"></div>
   <div class="hero-rings"><span></span><span></span><span></span><span></span></div>
@@ -574,7 +590,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   <div class="scrollcue"><small lang-el>Κυλήστε</small><small lang-en>Scroll</small><span class="line"></span></div>
 </section>
 
-<!-- about -->
 <section class="sec about" id="about">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
@@ -607,7 +622,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </section>
 
-<!-- philosophy -->
 <section class="sec philo" id="philosophy">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -647,7 +661,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </section>
 
-<!-- services -->
 <section class="sec" id="services">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -711,7 +724,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </section>
 
-<!-- space gallery -->
 <section class="sec space" id="space">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -733,7 +745,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </section>
 
-<!-- reviews -->
 <section class="sec reviews" id="reviews">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -766,8 +777,7 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
   <div class="rev-track-wrap reveal d2">
     <div class="rev-track" id="revTrack">
-      <!-- review cards injected by JS -->
-    </div>
+      </div>
   </div>
   <div class="wrap rev-foot reveal">
     <a href="https://www.doctoranytime.gr/d/Psychologos/oikonomou-xrysoula#review-section" target="_blank" rel="noopener"><span lang-el>Δείτε περισσότερες αξιολογήσεις</span><span lang-en>See more reviews</span></a>
@@ -776,7 +786,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </section>
 
-<!-- contact -->
 <section class="sec contact" id="contact">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -831,7 +840,6 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </section>
 
-<!-- footer -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
@@ -854,10 +862,8 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   </div>
 </footer>
 
-<!-- floating book btn -->
 <a href="#contact" class="fab" id="fab"><span lang-el>Κλείστε ραντεβού</span><span lang-en>Book a session</span></a>
 
-<!-- lightbox -->
 <div class="lb" id="lb"><button class="lb-close" id="lbClose" aria-label="Close"></button><img id="lbImg" src="" alt=""></div>
 
 <script>
@@ -896,7 +902,11 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 /* ---- hero parallax ---- */
 const heroImg=document.querySelector('.hero-bg img');
 addEventListener('scroll',()=>{
-  const y=scrollY;if(y<window.innerHeight)heroImg.style.transform=`scale(1.15) translateY(${y*0.12}px)`;
+  const y=scrollY;
+  if(y<window.innerHeight) {
+    const isMobile = window.innerWidth <= 760;
+    heroImg.style.transform = isMobile ? `scale(1.05) translateY(${y*0.08}px)` : `scale(1.15) translateY(${y*0.12}px)`;
+  }
 },{passive:true});
 
 /* ---- lightbox ---- */

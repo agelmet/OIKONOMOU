@@ -54,13 +54,16 @@ a{color:inherit;text-decoration:none}
   transition:opacity 0.9s cubic-bezier(0.4,0,0.2,1), visibility 0.9s;}
 #curtain.gone{opacity:0;visibility:hidden;transform:scale(1.05)}
 .curtain-logo {
-  width: 160px; max-width: 60vw; border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  animation: pulseLogo 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  width: 280px; max-width: 75vw; border-radius: 16px; opacity: 0;
+  animation: curtainEnter 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards, curtainPulse 1.8s ease-in-out 1s infinite alternate;
 }
-@keyframes pulseLogo {
-  0%, 100% { transform: scale(1); opacity: 0.9; }
-  50% { transform: scale(1.04); opacity: 1; box-shadow: 0 24px 48px rgba(217, 119, 87, 0.15); }
+@keyframes curtainEnter {
+  0% { transform: scale(0.7) translateY(20px); opacity: 0; filter: blur(15px); }
+  100% { transform: scale(1) translateY(0); opacity: 1; filter: blur(0); box-shadow: 0 15px 35px rgba(217, 119, 87, 0.2); }
+}
+@keyframes curtainPulse {
+  0% { transform: scale(1); box-shadow: 0 15px 35px rgba(217, 119, 87, 0.2); }
+  100% { transform: scale(1.05); box-shadow: 0 25px 60px rgba(217, 119, 87, 0.4); }
 }
 
 /* ---------- nav ---------- */
@@ -70,7 +73,8 @@ header.scrolled{background:rgba(250,243,224,0.85);backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,0.05);padding:12px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;min-width:0}
-.brand-logo-img{height:46px;border-radius:6px;transition:transform 0.4s cubic-bezier(0.3, 2, 0.4, 1);box-shadow:0 8px 16px rgba(0,0,0,0.08)}
+.brand-logo-img{height:56px;border-radius:6px;transition:all 0.4s cubic-bezier(0.3, 2, 0.4, 1);box-shadow:0 8px 16px rgba(0,0,0,0.08)}
+header.scrolled .brand-logo-img { height:46px; }
 .brand:hover .brand-logo-img{transform:scale(1.06) rotate(-1deg)}
 
 .navlinks{display:flex;align-items:center;gap:30px}
@@ -139,7 +143,7 @@ header.scrolled .lang{background:rgba(44,40,37,0.08)}
   padding:120px 0 60px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0; overflow:hidden;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;
-  transform:scale(1.15);filter:saturate(1.1) brightness(1.05) blur(6px);transition:transform 0.1s}
+  transform:scale(1.15);filter:saturate(1.1) brightness(1.05) blur(4px);transition:transform 0.1s}
 .hero-bg::after{content:"";position:absolute;inset:0;
   background:rgba(250,243,224,0.15)}
 .hero-rings{position:absolute;right:-15%;top:50%;transform:translateY(-50%);
@@ -447,9 +451,25 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   .burger{display:flex}
   .nav-right{gap:0}
   .sec{padding:80px 0}
-  .hero{padding:120px 0 70px}
-  .hero-inner{padding:28px 24px; border-radius:20px; max-width: 100%;}
-  .hero-meta .m+.m{padding-left:20px}
+  
+  /* Mobile Hero specific adjustments for better image visibility */
+  .hero{padding: 90px 0 40px; align-items: flex-end;}
+  .hero-inner{
+    padding:24px 20px; 
+    border-radius:20px; 
+    max-width: 100%;
+    background: linear-gradient(135deg, rgba(250, 243, 224, 0.9) 0%, rgba(250, 243, 224, 0.65) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-width: 0.5px;
+  }
+  .hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); margin-bottom: 14px; }
+  .hero-sub { font-size: 0.9rem; margin-bottom: 24px; }
+  .hero-meta { margin-top: 24px; gap: 16px; }
+  .hero-meta .m b { font-size: 1.3rem; }
+  .hero-meta .m+.m{padding-left:16px}
+  .scrollcue { display: none; } /* Hide on mobile to save space */
+  
   .rev-top{flex-direction:column;align-items:flex-start}
   .gallery{grid-template-columns:1fr;grid-auto-rows:220px}
   .g-a, .g-b, .g-c, .g-d, .g-e{grid-column:span 1;grid-row:span 1}
@@ -504,7 +524,7 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
 <!-- mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mm-top">
-    <img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4488.jpg?raw=true" class="brand-logo-img" alt="Logo" style="height:38px;">
+    <img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4488.jpg?raw=true" class="brand-logo-img" alt="Logo" style="height:48px;">
     <button class="mm-close" id="mmClose" aria-label="Close menu"></button>
   </div>
   <nav class="mm-links">
@@ -770,19 +790,32 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
       <div class="contact-info reveal d1">
         <div class="ci">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-          <div class="t"><small lang-el>Γραφείο</small><small lang-en>Practice</small><b>Παναγή Τσαλδάρη 14, Τ.Κ. 567 27</b><p lang-el>Νεάπολη, Θεσσαλονίκη</p><p lang-en>Neapoli, Thessaloniki</p></div>
+          <div class="t">
+            <small lang-el>Γραφείο</small><small lang-en>Practice</small>
+            <b lang-el>Παναγή Τσαλδάρη 14, Τ.Κ. 567 27</b><b lang-en>14 Panagi Tsaldari St., 567 27</b>
+            <p lang-el>Νεάπολη, Θεσσαλονίκη</p><p lang-en>Neapoli, Thessaloniki</p>
+          </div>
         </div>
         <div class="ci">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div class="t"><small lang-el>Τηλέφωνα</small><small lang-en>Phone</small><b><a href="tel:+306948530427">694 853 0427</a></b><p><a href="tel:+302311263271">2311 263271</a></p></div>
+          <div class="t">
+            <small lang-el>Τηλέφωνα</small><small lang-en>Phone</small>
+            <b><a href="tel:+306948530427">694 853 0427</a></b>
+            <p><a href="tel:+302311263271">2311 263271</a></p>
+          </div>
         </div>
         <div class="ci">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <div class="t"><small lang-el>Τρόπος Λειτουργίας</small><small lang-en>How it works</small><b lang-el>Δια ζώσης συνεδρίες</b><b lang-en>In-person sessions</b><p lang-el>Με διαθέσιμες απογευματινές ώρες — όλες οι συναντήσεις κατόπιν ραντεβού.</p><p lang-en>Afternoon slots available — all meetings by appointment.</p></div>
+          <div class="t">
+            <small lang-el>Τρόπος Λειτουργίας</small><small lang-en>How it works</small>
+            <b lang-el>Δια ζώσης συνεδρίες</b><b lang-en>In-person sessions</b>
+            <p lang-el>Με διαθέσιμες απογευματινές ώρες — όλες οι συναντήσεις κατόπιν ραντεβού.</p>
+            <p lang-en>Afternoon slots available — all meetings by appointment.</p>
+          </div>
         </div>
       </div>
       <div class="contact-card reveal d2">
-        <img data-zoom="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-135.jpg?raw=true" src="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-135.jpg?raw=true" alt="Επαγγελματική κάρτα — Speech & Thoughts">
+        <img lang-el data-zoom="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-135.jpg?raw=true" src="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-135.jpg?raw=true" alt="Επαγγελματική κάρτα — Speech & Thoughts">
         <div class="cc-in">
           <h4 lang-el>Speech & Thoughts</h4><h4 lang-en>Speech & Thoughts</h4>
           <p lang-el>Κλείστε το ραντεβού σας τηλεφωνικά ή ακολουθήστε μας στα κοινωνικά δίκτυα.</p>
@@ -803,7 +836,8 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4488.jpg?raw=true" class="brand-logo-img" style="height:38px;" alt="Logo">
+        <img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4488.jpg?raw=true" class="brand-logo-img" style="height:48px;" alt="Logo">
+        <b lang-el>Χρυσούλα Οικονόμου, MSc</b><b lang-en>Chrysoula Oikonomou, MSc</b>
       </div>
       <nav class="foot-nav">
         <a href="#about" lang-el>Προφίλ</a><a href="#about" lang-en>About</a>
@@ -828,7 +862,7 @@ footer{background:#231F1D;color:rgba(250,243,224,0.7);padding:60px 0 30px}
 
 <script>
 /* ---- intro curtain ---- */
-window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('curtain').classList.add('gone'),1400)});
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('curtain').classList.add('gone'),1800)});
 
 /* ---- header scroll ---- */
 const header=document.getElementById('header'),fab=document.getElementById('fab');

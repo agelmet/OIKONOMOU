@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Χρυσούλα Οικονόμου, MSc — Ψυχολόγος & Ψυχοθεραπεύτρια | Νεάπολη Θεσσαλονίκης</title>
+<meta name="description" content="Χρυσούλα Οικονόμου, MSc — Αδειούχος Ψυχολόγος & Ψυχοθεραπεύτρια στη Νεάπολη Θεσσαλονίκης. Ατομική ψυχοθεραπεία, συστημική θεραπεία ζεύγους & οικογένειας, κλινική υπνοθεραπεία. Ένας ασφαλής χώρος για να βρείτε τη δική σας φωνή.">
+<meta property="og:title" content="Χρυσούλα Οικονόμου, MSc — Ψυχολόγος & Ψυχοθεραπεύτρια">
+<meta property="og:description" content="Ένας ασφαλής, υποστηρικτικός χώρος ψυχοθεραπείας στη Νεάπολη Θεσσαλονίκης.">
+<meta property="og:image" content="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/doctor_449a5285-2735-4f35-b837-4f3d1eff786b.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --clay:#B5683E;          /* terracotta — brand */
+  --clay-soft:#C98A66;
+  --sage:#7E8B6F;          /* sage green — brand */
+  --sage-deep:#5C6650;
+  --cream:#F6F1E7;         /* warm paper */
+  --cream-2:#EFE7D6;
+  --ink:#322C26;           /* warm near-black */
+  --ink-soft:#5C544B;
+  --line:rgba(50,44,38,.12);
+  --shadow:0 24px 60px -28px rgba(50,44,38,.45);
+  --display:'Fraunces',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);background:var(--cream);color:var(--ink);
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  font-weight:400;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--clay);color:var(--cream)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+/* ---------- intro curtain ---------- */
+#curtain{position:fixed;inset:0;z-index:9999;background:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .9s ease,visibility .9s;}
+#curtain.gone{opacity:0;visibility:hidden}
+.curtain-mark{position:relative;width:120px;height:120px}
+.curtain-mark span{position:absolute;inset:0;border:1.5px solid var(--clay-soft);
+  border-radius:50%;opacity:0;animation:ripOut 2.4s ease-out infinite}
+.curtain-mark span:nth-child(2){animation-delay:.6s;border-color:var(--sage)}
+.curtain-mark span:nth-child(3){animation-delay:1.2s;border-color:var(--clay-soft)}
+.curtain-dot{position:absolute;top:50%;left:50%;width:14px;height:14px;
+  margin:-7px 0 0 -7px;border-radius:50%;background:var(--cream);
+  animation:breathe 2.4s ease-in-out infinite}
+@keyframes ripOut{0%{transform:scale(.2);opacity:.9}80%{opacity:0}100%{transform:scale(1);opacity:0}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.5)}}
+
+/* ---------- nav ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;
+  transition:background .4s ease,box-shadow .4s,padding .4s;padding:18px 0}
+header.scrolled{background:rgba(246,241,231,.88);backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line);padding:11px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand-logo{width:42px;height:42px;flex:none;position:relative;display:grid;place-items:center}
+.brand-logo svg{width:100%;height:100%}
+.brand-txt{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+.brand-txt b{font-family:var(--display);font-weight:500;font-size:1.06rem;
+  letter-spacing:.2px;white-space:nowrap;color:var(--cream);transition:color .4s}
+.brand-txt small{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--clay-soft);font-weight:600;transition:color .4s}
+header.scrolled .brand-txt b{color:var(--ink)}
+header.scrolled .brand-txt small{color:var(--clay)}
+header.scrolled .navlinks a{color:var(--ink-soft)}
+.navlinks a{color:rgba(246,241,231,.82)}
+.navlinks a:hover{color:var(--cream)}
+header.scrolled .navlinks a:hover{color:var(--ink)}
+header.scrolled .burger span{background:var(--ink)}
+.burger span{background:var(--cream)}
+header.scrolled .lang{background:rgba(50,44,38,.05)}
+.lang{background:rgba(246,241,231,.14)}
+header.scrolled .lang button{color:var(--ink-soft)}
+.lang button{color:rgba(246,241,231,.75)}
+header.scrolled .lang button.on{background:var(--cream);color:var(--ink)}
+.lang button.on{background:rgba(246,241,231,.22);color:var(--cream)}
+.navlinks{display:flex;align-items:center;gap:30px}
+.navlinks a{font-size:.84rem;font-weight:500;letter-spacing:.02em;
+  position:relative;padding:4px 0;transition:color .3s}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;
+  background:var(--clay);transition:width .35s ease}
+.navlinks a:hover{color:var(--ink)}.navlinks a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:18px}
+.lang{display:flex;gap:4px;align-items:center;border-radius:40px;padding:4px;transition:background .4s}
+.lang button{border:0;background:none;cursor:pointer;font:inherit;font-size:.78rem;
+  font-weight:600;padding:5px 11px;border-radius:30px;
+  display:flex;align-items:center;gap:6px;transition:.3s}
+.flag{width:18px;height:13px;border-radius:2px;flex:none;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.cta-nav{background:var(--clay);color:var(--cream);padding:10px 20px;border-radius:40px;
+  font-size:.82rem;font-weight:600;transition:.35s;white-space:nowrap}
+.cta-nav:hover{background:var(--ink);transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+
+/* mobile menu */
+.mobile-menu{position:fixed;inset:0;z-index:1500;background:var(--ink);
+  display:flex;flex-direction:column;padding:26px;
+  transform:translateX(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mm-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}
+.mm-top .brand-txt b,.mm-top .brand-txt small{color:var(--cream)}
+.mm-close{width:46px;height:46px;border:1px solid rgba(246,241,231,.25);background:none;
+  border-radius:50%;cursor:pointer;display:grid;place-items:center;transition:.3s}
+.mm-close:hover{background:rgba(246,241,231,.1);transform:rotate(90deg)}
+.mm-close::before,.mm-close::after{content:"";position:absolute;width:18px;height:1.6px;
+  background:var(--cream)}
+.mm-close::before{transform:rotate(45deg)}.mm-close::after{transform:rotate(-45deg)}
+.mm-links{display:flex;flex-direction:column;gap:6px}
+.mm-links a{font-family:var(--display);font-size:1.9rem;font-weight:400;color:var(--cream);
+  padding:9px 0;border-bottom:1px solid rgba(246,241,231,.1);
+  opacity:0;transform:translateX(24px);transition:opacity .5s,transform .5s,color .3s}
+.mobile-menu.open .mm-links a{opacity:1;transform:translateX(0)}
+.mobile-menu.open .mm-links a:nth-child(1){transition-delay:.1s}
+.mobile-menu.open .mm-links a:nth-child(2){transition-delay:.16s}
+.mobile-menu.open .mm-links a:nth-child(3){transition-delay:.22s}
+.mobile-menu.open .mm-links a:nth-child(4){transition-delay:.28s}
+.mobile-menu.open .mm-links a:nth-child(5){transition-delay:.34s}
+.mobile-menu.open .mm-links a:nth-child(6){transition-delay:.40s}
+.mm-links a:hover{color:var(--clay-soft)}
+.mm-foot{margin-top:auto;display:flex;flex-direction:column;gap:16px}
+.mm-foot .lang{align-self:flex-start;background:rgba(246,241,231,.08)}
+.mm-foot .lang button{color:rgba(246,241,231,.7)}
+.mm-foot .lang button.on{background:rgba(246,241,231,.16);color:var(--cream)}
+.mm-foot a.cta-nav{text-align:center}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;
+  padding:130px 0 70px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;
+  transform:scale(1.12);filter:saturate(.9)}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(105deg,rgba(48,42,36,.93) 0%,rgba(48,42,36,.78) 42%,rgba(48,42,36,.35) 100%)}
+.hero-rings{position:absolute;right:-10%;top:50%;transform:translateY(-50%);
+  width:680px;height:680px;z-index:1;pointer-events:none;opacity:.5}
+.hero-rings span{position:absolute;inset:0;margin:auto;border-radius:50%;
+  border:1px solid rgba(201,138,102,.4);animation:slowpulse 7s ease-in-out infinite}
+.hero-rings span:nth-child(1){width:100%;height:100%}
+.hero-rings span:nth-child(2){width:72%;height:72%;animation-delay:1s;border-color:rgba(126,139,111,.5)}
+.hero-rings span:nth-child(3){width:46%;height:46%;animation-delay:2s}
+.hero-rings span:nth-child(4){width:22%;height:22%;animation-delay:3s;border-color:rgba(126,139,111,.5)}
+@keyframes slowpulse{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.06);opacity:.9}}
+.hero-inner{position:relative;z-index:2;max-width:720px;color:var(--cream)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;font-weight:600;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--clay-soft);margin-bottom:26px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--clay-soft)}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(2.7rem,6.4vw,5rem);
+  line-height:1.04;letter-spacing:-.02em;margin-bottom:24px}
+.hero h1 em{font-style:italic;color:var(--clay-soft);font-weight:400}
+.hero-sub{font-size:clamp(1.02rem,2vw,1.22rem);font-weight:300;color:rgba(246,241,231,.86);
+  max-width:560px;margin-bottom:38px;line-height:1.66}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:46px;
+  font-weight:600;font-size:.9rem;cursor:pointer;border:0;transition:.4s;letter-spacing:.01em}
+.btn-primary{background:var(--clay);color:var(--cream)}
+.btn-primary:hover{background:var(--cream);color:var(--ink);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--cream);border:1px solid rgba(246,241,231,.4)}
+.btn-ghost:hover{background:rgba(246,241,231,.1);border-color:var(--cream)}
+.hero-meta{display:flex;gap:34px;margin-top:46px;flex-wrap:wrap;max-width:560px}
+.hero-meta .m{display:flex;flex-direction:column;gap:2px}
+.hero-meta .m b{font-family:var(--display);font-size:1.7rem;font-weight:400;color:var(--cream)}
+.hero-meta .m span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(246,241,231,.6)}
+.hero-meta .m+.m{padding-left:34px;border-left:1px solid rgba(246,241,231,.2)}
+.scrollcue{position:absolute;bottom:20px;left:auto;right:28px;transform:none;z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(246,241,231,.6)}
+.scrollcue small{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase}
+.scrollcue .line{width:1px;height:36px;background:rgba(246,241,231,.4);position:relative;overflow:hidden}
+.scrollcue .line::after{content:"";position:absolute;top:-50%;left:0;width:100%;height:50%;
+  background:var(--clay-soft);animation:drop 1.8s ease-in-out infinite}
+@keyframes drop{0%{top:-50%}100%{top:100%}}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(40px);
+  transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}
+.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}
+
+/* ---------- section frame ---------- */
+section{position:relative}
+.sec{padding:110px 0}
+.sec-head{max-width:680px;margin-bottom:60px}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:600;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--clay);margin-bottom:20px}
+.sec-eyebrow::before{content:"";width:26px;height:1px;background:var(--clay)}
+.sec-head h2{font-family:var(--display);font-weight:300;font-size:clamp(2rem,4.4vw,3.2rem);
+  line-height:1.08;letter-spacing:-.015em}
+.sec-head h2 em{font-style:italic;color:var(--clay)}
+.sec-head p{margin-top:18px;color:var(--ink-soft);font-size:1.04rem;font-weight:300}
+
+/* ---------- about ---------- */
+.about{background:var(--cream-2)}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.about-photo{position:relative}
+.about-photo .frame{position:relative;border-radius:200px 200px 22px 22px;overflow:hidden;
+  box-shadow:var(--shadow);cursor:zoom-in;aspect-ratio:3/4}
+.about-photo .frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s ease}
+.about-photo .frame:hover img{transform:scale(1.05)}
+.about-badge{position:absolute;bottom:-26px;right:-18px;background:var(--ink);color:var(--cream);
+  border-radius:50%;width:128px;height:128px;display:grid;place-items:center;text-align:center;
+  padding:14px;box-shadow:var(--shadow);animation:floaty 5s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.about-badge b{font-family:var(--display);font-size:1.9rem;font-weight:400;line-height:1}
+.about-badge span{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--clay-soft);margin-top:5px}
+.about-body h3{font-family:var(--display);font-weight:300;font-size:1.5rem;margin-bottom:18px;
+  line-height:1.3}
+.about-body p{color:var(--ink-soft);margin-bottom:16px;font-weight:300;font-size:1.02rem}
+.about-body p strong{color:var(--ink);font-weight:600}
+.about-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+.tag{font-size:.76rem;font-weight:500;padding:8px 15px;border-radius:30px;
+  background:var(--cream);border:1px solid var(--line);color:var(--ink-soft)}
+.license{margin-top:26px;font-size:.8rem;color:var(--ink-soft);
+  padding-left:14px;border-left:2px solid var(--clay)}
+
+/* ---------- philosophy ---------- */
+.philo{background:var(--ink);color:var(--cream)}
+.philo .sec-eyebrow{color:var(--clay-soft)}
+.philo .sec-eyebrow::before{background:var(--clay-soft)}
+.philo .sec-head h2{color:var(--cream)}.philo .sec-head h2 em{color:var(--clay-soft)}
+.philo .sec-head p{color:rgba(246,241,231,.7)}
+.philo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:14px}
+.pcard{position:relative;padding:38px 30px;border:1px solid rgba(246,241,231,.13);
+  border-radius:20px;background:rgba(246,241,231,.025);transition:.5s;overflow:hidden}
+.pcard:hover{background:rgba(246,241,231,.05);border-color:rgba(201,138,102,.5);transform:translateY(-6px)}
+.pcard .pico{width:54px;height:54px;border-radius:14px;background:rgba(201,138,102,.14);
+  display:grid;place-items:center;margin-bottom:24px}
+.pcard .pico svg{width:26px;height:26px;stroke:var(--clay-soft)}
+.pcard h4{font-family:var(--display);font-weight:400;font-size:1.32rem;margin-bottom:13px}
+.pcard p{font-size:.95rem;color:rgba(246,241,231,.72);font-weight:300}
+.philo-quote{margin-top:64px;text-align:center;max-width:840px;margin-left:auto;margin-right:auto}
+.philo-quote p{font-family:var(--display);font-weight:300;font-style:italic;
+  font-size:clamp(1.4rem,3.2vw,2.1rem);line-height:1.4}
+.philo-quote p em{color:var(--clay-soft);font-style:italic}
+.philo-quote span{display:block;margin-top:22px;font-size:.76rem;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(246,241,231,.5)}
+
+/* ---------- services ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc{position:relative;background:var(--cream-2);border-radius:22px;padding:42px 38px;
+  border:1px solid transparent;transition:.5s;overflow:hidden}
+.svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--clay);
+  transform:scaleY(0);transform-origin:top;transition:transform .5s ease}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow);background:var(--cream)}
+.svc:hover::before{transform:scaleY(1)}
+.svc-num{font-family:var(--display);font-size:.95rem;color:var(--clay);font-weight:500;
+  letter-spacing:.05em}
+.svc h3{font-family:var(--display);font-weight:400;font-size:1.5rem;margin:14px 0 14px;
+  line-height:1.22}
+.svc p{color:var(--ink-soft);font-size:.97rem;font-weight:300;margin-bottom:20px}
+.svc ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.svc ul li{font-size:.88rem;color:var(--ink);display:flex;align-items:flex-start;gap:10px}
+.svc ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sage);
+  margin-top:8px;flex:none}
+
+/* ---------- space gallery ---------- */
+.space{background:var(--sage-deep);color:var(--cream)}
+.space .sec-eyebrow{color:var(--clay-soft)}.space .sec-eyebrow::before{background:var(--clay-soft)}
+.space .sec-head h2{color:var(--cream)}.space .sec-head h2 em{color:var(--clay-soft)}
+.space .sec-head p{color:rgba(246,241,231,.78)}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:16px}
+.gitem{position:relative;overflow:hidden;border-radius:16px;cursor:zoom-in;
+  background:rgba(0,0,0,.2)}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease,filter .6s}
+.gitem:hover img{transform:scale(1.08)}
+.gitem::after{content:"⤢";position:absolute;right:14px;bottom:12px;color:var(--cream);
+  font-size:1.1rem;opacity:0;transform:translateY(8px);transition:.4s;
+  background:rgba(48,42,36,.55);width:36px;height:36px;border-radius:50%;
+  display:grid;place-items:center}
+.gitem:hover::after{opacity:1;transform:translateY(0)}
+.g-a{grid-column:span 4;grid-row:span 2}
+.g-b{grid-column:span 2;grid-row:span 1}
+.g-c{grid-column:span 2;grid-row:span 1}
+.g-d{grid-column:span 2;grid-row:span 1}
+.g-e{grid-column:span 2;grid-row:span 1}
+.g-f{grid-column:span 2;grid-row:span 1}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--cream-2)}
+.rev-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;
+  gap:30px;margin-bottom:54px}
+.rev-score{display:flex;align-items:center;gap:22px}
+.rev-score .big{font-family:var(--display);font-size:4.6rem;font-weight:300;line-height:.9;
+  color:var(--clay)}
+.rev-score .stars{display:flex;gap:3px;margin-bottom:7px}
+.rev-score .stars svg{width:19px;height:19px;fill:var(--clay)}
+.rev-score small{font-size:.84rem;color:var(--ink-soft)}
+.rev-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn-clay{background:var(--clay);color:var(--cream)}.btn-clay:hover{background:var(--ink);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-outline:hover{border-color:var(--clay);color:var(--clay)}
+.rev-track-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.rev-track{display:flex;gap:22px;width:max-content;animation:marq 60s linear infinite}
+.rev-track-wrap:hover .rev-track{animation-play-state:paused}
+.rcard{width:355px;background:var(--cream);border-radius:18px;padding:30px 28px;
+  border:1px solid var(--line);display:flex;flex-direction:column;gap:16px}
+.rcard .qmark{font-family:var(--display);font-size:2.6rem;line-height:.4;color:var(--clay);
+  opacity:.5;height:20px}
+.rcard p{font-size:.96rem;color:var(--ink);font-weight:300;flex:1;line-height:1.62}
+.rcard .who{display:flex;align-items:center;gap:13px}
+.rcard .av{width:42px;height:42px;border-radius:50%;background:var(--sage);color:var(--cream);
+  display:grid;place-items:center;font-family:var(--display);font-size:1.1rem;flex:none}
+.rcard .who b{font-size:.92rem;display:block}
+.rcard .who span{font-size:.72rem;color:var(--clay);display:flex;gap:2px;align-items:center}
+.rcard .who span svg{width:12px;height:12px;fill:var(--clay)}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.rev-foot{text-align:center;margin-top:46px}
+.rev-foot a{font-size:.86rem;color:var(--clay);font-weight:600;border-bottom:1px solid var(--clay);
+  padding-bottom:2px;transition:.3s}.rev-foot a:hover{color:var(--ink);border-color:var(--ink)}
+.rev-foot small{display:block;margin-top:14px;color:var(--ink-soft);font-size:.78rem;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);color:var(--cream)}
+.contact .sec-eyebrow{color:var(--clay-soft)}.contact .sec-eyebrow::before{background:var(--clay-soft)}
+.contact .sec-head h2{color:var(--cream)}.contact .sec-head h2 em{color:var(--clay-soft)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start}
+.ci{display:flex;gap:18px;padding:24px 0;border-bottom:1px solid rgba(246,241,231,.12)}
+.ci:last-of-type{border-bottom:0}
+.ci .ico{width:46px;height:46px;border-radius:12px;flex:none;background:rgba(201,138,102,.14);
+  display:grid;place-items:center}
+.ci .ico svg{width:21px;height:21px;stroke:var(--clay-soft)}
+.ci .t small{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(246,241,231,.55);display:block;margin-bottom:5px}
+.ci .t b{font-size:1.04rem;font-weight:500;display:block}
+.ci .t a{color:var(--cream);transition:.3s;border-bottom:1px solid transparent}
+.ci .t a:hover{color:var(--clay-soft)}
+.ci .t p{font-size:.94rem;color:rgba(246,241,231,.72);font-weight:300;margin-top:3px}
+.contact-card{background:rgba(246,241,231,.04);border:1px solid rgba(246,241,231,.13);
+  border-radius:24px;padding:14px;overflow:hidden}
+.contact-card img{border-radius:16px;cursor:zoom-in;width:100%;aspect-ratio:16/10;object-fit:cover}
+.contact-card .cc-in{padding:24px 16px 12px}
+.contact-card h4{font-family:var(--display);font-weight:400;font-size:1.3rem;margin-bottom:8px}
+.contact-card p{font-size:.9rem;color:rgba(246,241,231,.72);font-weight:300;margin-bottom:18px}
+.social-row{display:flex;gap:12px}
+.social-row a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(246,241,231,.2);
+  display:grid;place-items:center;transition:.3s}
+.social-row a:hover{background:var(--clay);border-color:var(--clay);transform:translateY(-3px)}
+.social-row a svg{width:18px;height:18px;fill:var(--cream)}
+
+/* ---------- footer ---------- */
+footer{background:#262019;color:rgba(246,241,231,.7);padding:54px 0 30px}
+.foot-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;
+  padding-bottom:30px;border-bottom:1px solid rgba(246,241,231,.1)}
+.foot-brand{display:flex;align-items:center;gap:13px}
+.foot-brand .brand-logo svg [stroke]{stroke:var(--clay-soft)}
+.foot-brand b{font-family:var(--display);font-size:1.2rem;color:var(--cream);font-weight:500}
+.foot-nav{display:flex;gap:26px;flex-wrap:wrap}
+.foot-nav a{font-size:.84rem;transition:.3s}.foot-nav a:hover{color:var(--clay-soft)}
+.foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  padding-top:26px;font-size:.8rem}
+.foot-bot a.advon{color:var(--cream);font-weight:600;border-bottom:1px solid var(--clay);
+  padding-bottom:1px;transition:.3s}.foot-bot a.advon:hover{color:var(--clay-soft)}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:5000;background:rgba(30,26,22,.94);
+  display:flex;align-items:center;justify-content:center;padding:30px;
+  opacity:0;visibility:hidden;transition:.4s;backdrop-filter:blur(6px)}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:92vw;max-height:88vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.6);
+  transform:scale(.92);transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.lb.open img{transform:scale(1)}
+.lb-close{position:absolute;top:24px;right:28px;width:50px;height:50px;border-radius:50%;
+  border:1px solid rgba(246,241,231,.3);background:rgba(0,0,0,.2);cursor:pointer;
+  display:grid;place-items:center;transition:.3s}
+.lb-close:hover{background:var(--clay);transform:rotate(90deg)}
+.lb-close::before,.lb-close::after{content:"";position:absolute;width:20px;height:1.6px;background:var(--cream)}
+.lb-close::before{transform:rotate(45deg)}.lb-close::after{transform:rotate(-45deg)}
+
+/* floating book btn */
+.fab{position:fixed;bottom:24px;right:24px;z-index:900;background:var(--clay);color:var(--cream);
+  padding:14px 24px;border-radius:46px;font-weight:600;font-size:.88rem;
+  box-shadow:0 14px 34px -12px rgba(181,104,62,.7);display:none;align-items:center;gap:9px;
+  transition:.4s;opacity:0;transform:translateY(20px)}
+.fab.show{opacity:1;transform:translateY(0)}
+.fab:hover{background:var(--ink);transform:translateY(-3px)}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .about-grid{grid-template-columns:1fr;gap:70px}
+  .about-photo{max-width:380px;margin:0 auto}
+  .philo-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .g-a{grid-column:span 2;grid-row:span 2}
+  .g-b,.g-c,.g-d,.g-e,.g-f{grid-column:span 1;grid-row:span 1}
+}
+@media(max-width:760px){
+  .navlinks,.nav-right .lang,.nav-right .cta-nav{display:none}
+  .burger{display:flex}
+  .nav-right{gap:0}
+  .sec{padding:78px 0}
+  .hero{padding:120px 0 90px}
+  .hero-meta .m+.m{padding-left:24px}
+  .rev-top{flex-direction:column;align-items:flex-start}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:220px}
+  .g-a{grid-column:span 1;grid-row:span 1}
+  .fab{display:flex}
+  .about-badge{width:104px;height:104px;right:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001s!important;transition-duration:.2s!important}
+  .reveal{opacity:1;transform:none}
+}
+[lang-en]{display:none}
+</style>
+</head>
+<body>
+
+<!-- intro curtain -->
+<div id="curtain"><div class="curtain-mark"><span></span><span></span><span></span><div class="curtain-dot"></div></div></div>
+
+<!-- header -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Χρυσούλα Οικονόμου">
+      <span class="brand-logo">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M24 6c-8 0-15 6-15 14 0 5 3 9 7 11l-1 8 8-5c8.3 0 15-5.4 15-14C38 12 32 6 24 6Z" stroke="#B5683E" stroke-width="1.6"/>
+          <path d="M24 14c-4 0-7 3-7 6.5S20 27 24 27s7-3 7-6.5S28 14 24 14Z" stroke="#7E8B6F" stroke-width="1.4"/>
+          <circle cx="24" cy="20.5" r="2.4" fill="#B5683E"/>
+        </svg>
+      </span>
+      <span class="brand-txt">
+        <b>Χρυσούλα Οικονόμου</b>
+        <small lang-el>Ψυχολόγος · MSc</small>
+        <small lang-en>Psychologist · MSc</small>
+      </span>
+    </a>
+
+    <nav class="navlinks">
+      <a href="#about" lang-el>Προφίλ</a><a href="#about" lang-en>About</a>
+      <a href="#philosophy" lang-el>Προσέγγιση</a><a href="#philosophy" lang-en>Approach</a>
+      <a href="#services" lang-el>Υπηρεσίες</a><a href="#services" lang-en>Services</a>
+      <a href="#space" lang-el>Ο Χώρος</a><a href="#space" lang-en>The Space</a>
+      <a href="#reviews" lang-el>Κριτικές</a><a href="#reviews" lang-en>Reviews</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="el" class="on" aria-label="Ελληνικά">
+          <span class="flag"><svg viewBox="0 0 27 18" xmlns="http://www.w3.org/2000/svg"><rect width="27" height="18" fill="#0D5EAF"/><rect y="2" width="27" height="2" fill="#fff"/><rect y="6" width="27" height="2" fill="#fff"/><rect y="10" width="27" height="2" fill="#fff"/><rect y="14" width="27" height="2" fill="#fff"/><rect width="10" height="10" fill="#0D5EAF"/><rect x="4" width="2" height="10" fill="#fff"/><rect y="4" width="10" height="2" fill="#fff"/></svg></span>EL
+        </button>
+        <button data-lang="en" aria-label="English">
+          <span class="flag"><svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="t"><path d="M0 0v30h60V0z"/></clipPath><g clip-path="url(#t)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>EN
+        </button>
+      </div>
+      <a href="#contact" class="cta-nav" lang-el>Κλείστε ραντεβού</a>
+      <a href="#contact" class="cta-nav" lang-en>Book a session</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-top">
+    <span class="brand-txt"><b>Χρυσούλα Οικονόμου</b><small lang-el>Ψυχολόγος · MSc</small><small lang-en>Psychologist · MSc</small></span>
+    <button class="mm-close" id="mmClose" aria-label="Close menu"></button>
+  </div>
+  <nav class="mm-links">
+    <a href="#about" lang-el>Προφίλ</a><a href="#about" lang-en>About</a>
+    <a href="#philosophy" lang-el>Προσέγγιση</a><a href="#philosophy" lang-en>Approach</a>
+    <a href="#services" lang-el>Υπηρεσίες</a><a href="#services" lang-en>Services</a>
+    <a href="#space" lang-el>Ο Χώρος</a><a href="#space" lang-en>The Space</a>
+    <a href="#reviews" lang-el>Κριτικές</a><a href="#reviews" lang-en>Reviews</a>
+    <a href="#contact" lang-el>Επικοινωνία</a><a href="#contact" lang-en>Contact</a>
+  </nav>
+  <div class="mm-foot">
+    <div class="lang">
+      <button data-lang="el" class="on">EL</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <a href="#contact" class="cta-nav" lang-el>Κλείστε ραντεβού</a>
+    <a href="#contact" class="cta-nav" lang-en>Book a session</a>
+  </div>
+</div>
+
+<!-- hero -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/unnamed-129.jpg" alt="Γραφείο ψυχοθεραπείας"></div>
+  <div class="hero-rings"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow"><span lang-el>Κλινική Ψυχολογία · Συστημική Ψυχοθεραπεία</span><span lang-en>Clinical Psychology · Systemic Psychotherapy</span></span>
+      <h1>
+        <span lang-el>Ένας χώρος όπου βρίσκετε <em>τη δική σας φωνή</em>.</span>
+        <span lang-en>A space where you find <em>your own voice</em>.</span>
+      </h1>
+      <p class="hero-sub">
+        <span lang-el>Χρυσούλα Οικονόμου, MSc — Αδειούχος Ψυχολόγος & Ψυχοθεραπεύτρια στη Νεάπολη Θεσσαλονίκης. Δεν επιβάλλω λύσεις· στέκομαι δίπλα σας ώσπου να ανακαλύψετε αυτές που ήδη κουβαλάτε.</span>
+        <span lang-en>Chrysoula Oikonomou, MSc — Licensed Psychologist & Psychotherapist in Neapoli, Thessaloniki. I don't impose solutions; I stay beside you until you uncover the ones you already carry.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary"><span lang-el>Κλείστε ραντεβού</span><span lang-en>Book a session</span></a>
+        <a href="#philosophy" class="btn btn-ghost"><span lang-el>Η προσέγγισή μου</span><span lang-en>My approach</span></a>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><b>9.8</b><span lang-el>Αξιολόγηση</span><span lang-en>Rating</span></div>
+        <div class="m"><b>13+</b><span lang-el>Χρόνια εμπειρίας</span><span lang-en>Years' practice</span></div>
+        <div class="m"><b>MSc</b><span lang-el>Κλινική Ψυχολογία</span><span lang-en>Clinical Psychology</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scrollcue"><small lang-el>Κυλήστε</small><small lang-en>Scroll</small><span class="line"></span></div>
+</section>
+
+<!-- about -->
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="frame" data-zoom="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4487.JPG?raw=true">
+        <img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4487.JPG?raw=true" alt="Χρυσούλα Οικονόμου, Ψυχολόγος">
+      </div>
+      <div class="about-badge"><b>13+</b><span lang-el>Χρόνια Κλινικής Εμπειρίας</span><span lang-en>Years of Clinical Work</span></div>
+    </div>
+    <div class="about-body">
+      <div class="sec-eyebrow reveal"><span lang-el>Γνωριμία</span><span lang-en>Meet Chrysoula</span></div>
+      <h2 class="sec-head reveal d1" style="font-family:var(--display);font-weight:300;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.08;letter-spacing:-.015em;margin-bottom:8px">
+        <span lang-el>Ο άνθρωπος, <em>ολιστικά</em>.</span>
+        <span lang-en>The whole person, <em>held with care</em>.</span>
+      </h2>
+      <h3 class="reveal d1" lang-el>Ένα πολυδιάστατο ακαδημαϊκό υπόβαθρο στην υπηρεσία της ψυχικής σας υγείας.</h3>
+      <h3 class="reveal d1" lang-en>A multidimensional academic background in service of your mental wellbeing.</h3>
+      <p class="reveal d2" lang-el>Εξειδικεύτηκα μέσω <strong>Μεταπτυχιακού (MSc) στην Κλινική Ψυχολογία</strong> στο πεδίο των εξαρτήσεων, στο Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης. Η επιστημονική μου ταυτότητα εμπλουτίζεται διαρκώς: εκπαίδευση στις Μεταμοντέρνες Προσεγγίσεις, στη χορήγηση ψυχομετρικών εργαλείων και στην Κλινική Υπνοθεραπεία, με περαιτέρω μετεκπαίδευση στην Ειδική Αγωγή.</p>
+      <p class="reveal d2" lang-en>I specialised through an <strong>MSc in Clinical Psychology</strong> focused on addiction, at the Aristotle University of Thessaloniki. My training continually deepens: postmodern therapeutic approaches, the administration of psychometric tools, Clinical Hypnotherapy, and further study in Special Education.</p>
+      <p class="reveal d3" lang-el>Η κλινική μου διαδρομή σφυρηλατήθηκε στα πιο ευαίσθητα περιβάλλοντα — από το <strong>Παιδοογκολογικό Τμήμα του ΑΧΕΠΑ</strong> και το <strong>ΚΕΘΕΑ</strong>, μέχρι Κέντρα Δυσλεξίας και τη στήριξη παιδιών με αυτισμό. Σήμερα προσφέρω έναν απόλυτα ασφαλή χώρο όπου κάθε άτομο, ζευγάρι ή οικογένεια μπορεί να ξεπεράσει τα εμπόδια που το κρατούν πίσω.</p>
+      <p class="reveal d3" lang-en>My clinical path was forged in the most sensitive settings — from the <strong>Paediatric Oncology Unit of AHEPA Hospital</strong> and <strong>KETHEA</strong>, to dyslexia centres and supporting children with autism. Today I offer a wholly safe space where every individual, couple or family can move past what holds them back.</p>
+      <div class="about-tags reveal d4">
+        <span class="tag" lang-el>Συστημική Προσέγγιση</span><span class="tag" lang-en>Systemic Approach</span>
+        <span class="tag" lang-el>Μη Κατευθυντική Παρέμβαση</span><span class="tag" lang-en>Non-Directive Practice</span>
+        <span class="tag" lang-el>Κλινική Υπνοθεραπεία</span><span class="tag" lang-en>Clinical Hypnotherapy</span>
+        <span class="tag" lang-el>Ειδική Αγωγή</span><span class="tag" lang-en>Special Education</span>
+      </div>
+      <p class="license reveal d4" lang-el>Αδειούχος Ψυχολόγος — Αρ. Αδείας: ΔΔΥ/ΠΚΜ 345273/8880</p>
+      <p class="license reveal d4" lang-en>Licensed Psychologist — Licence No. ΔΔΥ/ΠΚΜ 345273/8880</p>
+    </div>
+  </div>
+</section>
+
+<!-- philosophy -->
+<section class="sec philo" id="philosophy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow"><span lang-el>Η Φιλοσοφία μου</span><span lang-en>My Philosophy</span></div>
+      <h2>
+        <span lang-el>Κανείς δεν θεραπεύεται όταν του <em>επιβάλλεις</em> τη λύση.</span>
+        <span lang-en>No one heals when the solution is <em>imposed</em> on them.</span>
+      </h2>
+      <p lang-el>Θεραπεύεται όταν νιώθει πως τον καταλαβαίνουν. Τρεις αρχές καθοδηγούν κάθε συνεδρία στο γραφείο μου.</p>
+      <p lang-en>People heal when they feel understood. Three principles guide every session in my practice.</p>
+    </div>
+    <div class="philo-grid">
+      <div class="pcard reveal d1">
+        <div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3v18M4 7l8 5 8-5"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h4 lang-el>Η Μη Κατευθυντική Στάση</h4><h4 lang-en>The Non-Directive Stance</h4>
+        <p lang-el>Εσείς είστε ο ειδικός του εαυτού σας. Δεν σας κρίνω ούτε σας «καθοδηγώ» με αυστηρούς κανόνες — στέκομαι δίπλα σας ως καθρέφτης, σεβόμενη απόλυτα τον ρυθμό σας. Ανακαλύπτουμε μαζί τις λύσεις που είναι ήδη κρυμμένες μέσα σας.</p>
+        <p lang-en>You are the expert on yourself. I don't judge or "direct" you with rigid rules — I stand beside you as a mirror, fully respecting your pace. Together we uncover the answers already hidden within you.</p>
+      </div>
+      <div class="pcard reveal d2">
+        <div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="12" cy="17" r="3"/><path d="M9 9.5l3 5M15 9.5l-3 5"/></svg></div>
+        <h4 lang-el>Το Σύστημα πάνω από το Άτομο</h4><h4 lang-en>The System over the Individual</h4>
+        <p lang-el>Όταν ένα παιδί δυσκολεύεται ή ένα ζευγάρι συγκρούεται, η Συστημική Ψυχοθεραπεία αλλάζει το πρίσμα: εξετάζουμε την αλληλεπίδραση. Αλλάζοντας τη δυναμική των σχέσεων, το σύμπτωμα συχνά υποχωρεί από μόνο του.</p>
+        <p lang-en>When a child struggles or a couple clashes, Systemic Psychotherapy shifts the lens to the interaction itself. Change the dynamics of the relationships, and the symptom often eases on its own.</p>
+      </div>
+      <div class="pcard reveal d3">
+        <div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 4 2 7h10c0-3 2-4 2-7a7 7 0 0 0-7-7Z"/><path d="M9 21h6"/></svg></div>
+        <h4 lang-el>Το Κλειδί της Κλινικής Ύπνωσης</h4><h4 lang-en>The Key of Clinical Hypnosis</h4>
+        <p lang-el>Όταν το συνειδητό μυαλό αντιστέκεται, η Κλινική Υπνοθεραπεία λειτουργεί ως γέφυρα. Δεν είναι απώλεια ελέγχου — είναι κατάσταση απόλυτης διαύγειας, όπου το υποσυνείδητο γίνεται δεκτικό στη θετική αλλαγή, βοηθώντας στην υπέρβαση τραυμάτων και φοβιών.</p>
+        <p lang-en>When the conscious mind resists, Clinical Hypnotherapy becomes a bridge. It is not a loss of control — it is a state of complete clarity, where the subconscious opens to positive change, helping overcome traumas and fears.</p>
+      </div>
+    </div>
+    <div class="philo-quote reveal d2">
+      <p lang-el>«Στο γραφείο, <em>η επιστήμη αγκαλιάζει τον άνθρωπο.</em> Ο χώρος αυτός υπάρχει για να σας υπενθυμίσει τη δύναμη που ήδη διαθέτετε.»</p>
+      <p lang-en>"In the practice, <em>science embraces the human being.</em> This space exists to remind you of the strength you already hold."</p>
+      <span lang-el>Χρυσούλα Οικονόμου, MSc</span><span lang-en>Chrysoula Oikonomou, MSc</span>
+    </div>
+  </div>
+</section>
+
+<!-- services -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow"><span lang-el>Υπηρεσίες</span><span lang-en>Services</span></div>
+      <h2>
+        <span lang-el>Φροντίδα <em>στα μέτρα σας</em>.</span>
+        <span lang-en>Care shaped <em>around you</em>.</span>
+      </h2>
+      <p lang-el>Κάθε συνεδρία διαρκεί 60 λεπτά και προγραμματίζεται κατόπιν ραντεβού, για τη διασφάλιση του απαραίτητου θεραπευτικού χρόνου.</p>
+      <p lang-en>Each session lasts 60 minutes and is arranged by appointment, to protect the therapeutic time you deserve.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal d1">
+        <span class="svc-num">01</span>
+        <h3 lang-el>Ατομική Ψυχοθεραπεία & Διαχείριση Κρίσεων</h3>
+        <h3 lang-en>Individual Therapy & Crisis Support</h3>
+        <p lang-el>Μέσα από τη Μη Κατευθυντική Παρέμβαση δημιουργούμε χώρο άνευ όρων αποδοχής. Στόχος δεν είναι η εξάλειψη του συμπτώματος, αλλά η βαθιά κατανόηση της πηγής του — με ασφάλεια.</p>
+        <p lang-en>Through non-directive practice we create a space of unconditional acceptance. The goal isn't to erase the symptom, but to understand its root — safely.</p>
+        <ul>
+          <li lang-el>Ατομικές συνεδρίες ενηλίκων</li><li lang-en>Individual adult sessions</li>
+          <li lang-el>Διαχείριση άγχους & στρες</li><li lang-en>Anxiety & stress management</li>
+          <li lang-el>Διαχείριση κρίσεων πανικού</li><li lang-en>Panic-attack support</li>
+          <li lang-el>Διαχείριση πένθους</li><li lang-en>Grief & loss</li>
+        </ul>
+      </div>
+      <div class="svc reveal d2">
+        <span class="svc-num">02</span>
+        <h3 lang-el>Συστημική Θεραπεία Ζεύγους & Οικογένειας</h3>
+        <h3 lang-en>Systemic Couples & Family Therapy</h3>
+        <p lang-el>Κανένας άνθρωπος δεν υπάρχει στο κενό· είναι μέρος ενός «συστήματος». Η θεραπεία αγκαλιάζει τις σχέσεις — από κρίσεις επικοινωνίας ζεύγους έως τη συμβουλευτική γονέων.</p>
+        <p lang-en>No one exists in a vacuum; each of us belongs to a "system". This therapy embraces relationships — from couple-communication crises to parental guidance.</p>
+        <ul>
+          <li lang-el>Θεραπεία & συμβουλευτική ζεύγους</li><li lang-en>Couples therapy & counselling</li>
+          <li lang-el>Συμβουλευτική οικογένειας</li><li lang-en>Family counselling</li>
+          <li lang-el>Συμβουλευτική γονέων & παιδιών</li><li lang-en>Parent & child guidance</li>
+        </ul>
+      </div>
+      <div class="svc reveal d1">
+        <span class="svc-num">03</span>
+        <h3 lang-el>Κλινική Υπνοθεραπεία</h3>
+        <h3 lang-en>Clinical Hypnotherapy</h3>
+        <p lang-el>Ένα ισχυρό, επιστημονικά τεκμηριωμένο εργαλείο που διευκολύνει την πρόσβαση στο υποσυνείδητο. Σε βαθιά χαλάρωση, επιτρέπεται η ταχύτερη αναδόμηση περιοριστικών πεποιθήσεων και η αντιμετώπιση χρόνιων φοβιών.</p>
+        <p lang-en>A powerful, evidence-based tool that eases access to the subconscious. In deep relaxation, limiting beliefs are reshaped faster and chronic fears are addressed.</p>
+        <ul>
+          <li lang-el>Συνεδρία υπνοθεραπείας</li><li lang-en>Hypnotherapy session</li>
+          <li lang-el>Αντιμετώπιση φοβιών & μοτίβων</li><li lang-en>Phobias & recurring patterns</li>
+        </ul>
+      </div>
+      <div class="svc reveal d2">
+        <span class="svc-num">04</span>
+        <h3 lang-el>Ειδική Αγωγή & Κοινωνική Μέριμνα</h3>
+        <h3 lang-en>Special Education & Social Care</h3>
+        <p lang-el>Με ισχυρό υπόβαθρο στην Ειδική Αγωγή, τις Μαθησιακές Δυσκολίες και τον Αυτισμό, παρέχεται στοχευμένη υποστήριξη. Το γραφείο διατηρεί ειδική τιμολογιακή πολιτική, διασφαλίζοντας ισότιμη πρόσβαση στην ψυχική υγεία.</p>
+        <p lang-en>With a strong background in Special Education, learning difficulties and autism, support is targeted and specific. A special pricing policy ensures equal access to mental health care.</p>
+        <ul>
+          <li lang-el>Υποστήριξη νευροαναπτυξιακών προκλήσεων</li><li lang-en>Neurodevelopmental support</li>
+          <li lang-el>Ειδικό κόστος για ΑΜΕΑ, ανέργους & φοιτητές</li><li lang-en>Reduced rates for students, unemployed & people with disabilities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- space gallery -->
+<section class="sec space" id="space">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow"><span lang-el>Ο Χώρος</span><span lang-en>The Space</span></div>
+      <h2>
+        <span lang-el>Ένα περιβάλλον που <em>ηρεμεί</em>, πριν καν μιλήσουμε.</span>
+        <span lang-en>A setting that <em>calms</em>, before a word is spoken.</span>
+      </h2>
+      <p lang-el>Φωτεινό, ζεστό και διακριτικό — σχεδιασμένο ώστε να νιώθετε ασφάλεια από την πρώτη στιγμή. Κάντε κλικ σε κάθε φωτογραφία για πλήρη προβολή.</p>
+      <p lang-en>Bright, warm and discreet — designed so you feel safe from the first moment. Click any photo to view it full size.</p>
+    </div>
+    <div class="gallery">
+      <div class="gitem g-a reveal" data-zoom="https://raw.githubusercontent.com/agelmet/OIKONOMOU/refs/heads/main/unnamed-4.png"><img src="https://raw.githubusercontent.com/agelmet/OIKONOMOU/refs/heads/main/unnamed-4.png" alt="Ο χώρος του γραφείου" loading="lazy"></div>
+      <div class="gitem g-b reveal d1" data-zoom="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/unnamed-129.jpg"><img src="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/unnamed-129.jpg" alt="Γραφείο" loading="lazy"></div>
+      <div class="gitem g-c reveal d2" data-zoom="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/unnamed-131.jpg"><img src="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/unnamed-131.jpg" alt="Χώρος συνεδριών" loading="lazy"></div>
+      <div class="gitem g-d reveal d1" data-zoom="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/unnamed-132.jpg"><img src="https://raw.githubusercontent.com/agelmet/OIKONOMOU/df970c5d7bef969f90a3dbeda179675e992d4855/unnamed-132.jpg" alt="Χώρος υποδοχής" loading="lazy"></div>
+      <div class="gitem g-e reveal d2" data-zoom="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-128.jpg?raw=true"><img src="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-128.jpg?raw=true" alt="Λεπτομέρεια χώρου" loading="lazy"></div>
+      <div class="gitem g-f reveal d3" data-zoom="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4487.JPG?raw=true"><img src="https://github.com/agelmet/OIKONOMOU/blob/main/IMG_4487.JPG?raw=true" alt="Χρυσούλα Οικονόμου στο γραφείο" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- reviews -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow"><span lang-el>Η δική σας αλήθεια</span><span lang-en>Your truth</span></div>
+      <h2>
+        <span lang-el>Λόγια <em>ανθρώπων</em> που μας εμπιστεύτηκαν.</span>
+        <span lang-en>Words from <em>people</em> who trusted us.</span>
+      </h2>
+    </div>
+    <div class="rev-top reveal d1">
+      <div class="rev-score">
+        <span class="big">9.8</span>
+        <div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 18l-6.1 3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 18l-6.1 3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 18l-6.1 3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 18l-6.1 3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 18l-6.1 3 1.2-6.8-5-4.9 6.9-1z"/></svg>
+          </div>
+          <small lang-el>Εξαιρετική αξιολόγηση από ανθρώπους που μας εμπιστεύτηκαν</small>
+          <small lang-en>Outstanding rating from people who trusted us</small>
+        </div>
+      </div>
+      <div class="rev-cta">
+        <a href="https://www.doctoranytime.gr/d/Psychologos/oikonomou-xrysoula#review-section" target="_blank" rel="noopener" class="btn btn-clay"><span lang-el>Διαβάστε τις κριτικές</span><span lang-en>Read the reviews</span></a>
+        <a href="https://www.doctoranytime.gr/d/Psychologos/oikonomou-xrysoula#review-section" target="_blank" rel="noopener" class="btn btn-outline"><span lang-el>Αξιολογήστε την εμπειρία σας</span><span lang-en>Rate your experience</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="rev-track-wrap reveal d2">
+    <div class="rev-track" id="revTrack">
+      <!-- review cards injected by JS (duplicated for seamless loop) -->
+    </div>
+  </div>
+  <div class="wrap rev-foot reveal">
+    <a href="https://www.doctoranytime.gr/d/Psychologos/oikonomou-xrysoula#review-section" target="_blank" rel="noopener"><span lang-el>Δείτε περισσότερες αξιολογήσεις</span><span lang-en>See more reviews</span></a>
+    <small lang-el>Η αξιολόγηση πραγματοποιείται ανεξάρτητα, με απόλυτο σεβασμό στην ιδιωτικότητά σας.</small>
+    <small lang-en>Reviews are collected independently, with full respect for your privacy.</small>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow"><span lang-el>Επικοινωνία</span><span lang-en>Get in touch</span></div>
+      <h2>
+        <span lang-el>Το πρώτο βήμα ξεκινά με <em>ένα μήνυμα</em>.</span>
+        <span lang-en>The first step begins with <em>a single message</em>.</span>
+      </h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal d1">
+        <div class="ci">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div class="t"><small lang-el>Γραφείο</small><small lang-en>Practice</small><b>Παναγή Τσαλδάρη 14, Τ.Κ. 567 27</b><p lang-el>Νεάπολη, Θεσσαλονίκη</p><p lang-en>Neapoli, Thessaloniki</p></div>
+        </div>
+        <div class="ci">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg></div>
+          <div class="t"><small lang-el>Τηλέφωνα</small><small lang-en>Phone</small><b><a href="tel:+306948530427">694 853 0427</a></b><p><a href="tel:+302311263271">2311 263271</a></p></div>
+        </div>
+        <div class="ci">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div class="t"><small lang-el>Τρόπος Λειτουργίας</small><small lang-en>How it works</small><b lang-el>Δια ζώσης συνεδρίες</b><b lang-en>In-person sessions</b><p lang-el>Με διαθέσιμες απογευματινές ώρες — όλες οι συναντήσεις κατόπιν ραντεβού.</p><p lang-en>Afternoon slots available — all meetings by appointment.</p></div>
+        </div>
+      </div>
+      <div class="contact-card reveal d2">
+        <img data-zoom="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-135.jpg?raw=true" src="https://github.com/agelmet/OIKONOMOU/blob/main/unnamed-135.jpg?raw=true" alt="Επαγγελματική κάρτα — Speech & Thoughts">
+        <div class="cc-in">
+          <h4 lang-el>Speech & Thoughts</h4><h4 lang-en>Speech & Thoughts</h4>
+          <p lang-el>Κλείστε το ραντεβού σας τηλεφωνικά ή ακολουθήστε μας στα κοινωνικά δίκτυα.</p>
+          <p lang-en>Book your session by phone, or follow along on social media.</p>
+          <div class="social-row">
+            <a href="https://www.facebook.com/speechandthoughts" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h3V5h-3c-2.2 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1Z"/></svg></a>
+            <a href="https://www.instagram.com/speech_thoughts" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm0 1.8a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4ZM16 3H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5h8a5 5 0 0 0 5-5V8a5 5 0 0 0-5-5Zm3.2 13A3.2 3.2 0 0 1 16 19.2H8A3.2 3.2 0 0 1 4.8 16V8A3.2 3.2 0 0 1 8 4.8h8A3.2 3.2 0 0 1 19.2 8v8Zm-2.7-8.9a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6Z"/></svg></a>
+            <a href="tel:+306948530427" aria-label="Phone"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="brand-logo">
+          <svg viewBox="0 0 48 48" fill="none"><path d="M24 6c-8 0-15 6-15 14 0 5 3 9 7 11l-1 8 8-5c8.3 0 15-5.4 15-14C38 12 32 6 24 6Z" stroke="#C98A66" stroke-width="1.6"/><path d="M24 14c-4 0-7 3-7 6.5S20 27 24 27s7-3 7-6.5S28 14 24 14Z" stroke="#7E8B6F" stroke-width="1.4"/><circle cx="24" cy="20.5" r="2.4" fill="#C98A66"/></svg>
+        </span>
+        <b>Χρυσούλα Οικονόμου, MSc</b>
+      </div>
+      <nav class="foot-nav">
+        <a href="#about" lang-el>Προφίλ</a><a href="#about" lang-en>About</a>
+        <a href="#services" lang-el>Υπηρεσίες</a><a href="#services" lang-en>Services</a>
+        <a href="#reviews" lang-el>Κριτικές</a><a href="#reviews" lang-en>Reviews</a>
+        <a href="#contact" lang-el>Επικοινωνία</a><a href="#contact" lang-en>Contact</a>
+      </nav>
+    </div>
+    <div class="foot-bot">
+      <span lang-el>© 2026 Χρυσούλα Οικονόμου · Αρ. Αδείας ΔΔΥ/ΠΚΜ 345273/8880 · Νεάπολη Θεσσαλονίκης</span>
+      <span lang-en>© 2026 Chrysoula Oikonomou · Licence No. ΔΔΥ/ΠΚΜ 345273/8880 · Neapoli, Thessaloniki</span>
+      <span><span lang-el>Σχεδιασμός από</span><span lang-en>Designed by</span> <a class="advon" href="https://www.advonmedia.com" target="_blank" rel="noopener">Advon Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- floating book btn -->
+<a href="#contact" class="fab" id="fab"><span lang-el>Κλείστε ραντεβού</span><span lang-en>Book a session</span></a>
+
+<!-- lightbox -->
+<div class="lb" id="lb"><button class="lb-close" id="lbClose" aria-label="Close"></button><img id="lbImg" src="" alt=""></div>
+
+<script>
+/* ---- intro curtain ---- */
+window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('curtain').classList.add('gone'),1400)});
+
+/* ---- header scroll ---- */
+const header=document.getElementById('header'),fab=document.getElementById('fab');
+addEventListener('scroll',()=>{
+  const y=scrollY;
+  header.classList.toggle('scrolled',y>40);
+  fab.classList.toggle('show',y>700);
+},{passive:true});
+
+/* ---- mobile menu ---- */
+const mm=document.getElementById('mobileMenu');
+document.getElementById('burger').onclick=()=>{mm.classList.add('open');document.body.style.overflow='hidden'};
+const closeMM=()=>{mm.classList.remove('open');document.body.style.overflow=''};
+document.getElementById('mmClose').onclick=closeMM;
+mm.querySelectorAll('.mm-links a').forEach(a=>a.onclick=closeMM);
+
+/* ---- language toggle ---- */
+function setLang(l){
+  document.documentElement.lang=l;
+  document.querySelectorAll('[lang-el]').forEach(e=>e.style.display=l==='el'?'':'none');
+  document.querySelectorAll('[lang-en]').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+setLang('el');
+
+/* ---- reveal on scroll ---- */
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---- hero parallax ---- */
+const heroImg=document.querySelector('.hero-bg img');
+addEventListener('scroll',()=>{
+  const y=scrollY;if(y<window.innerHeight)heroImg.style.transform=`scale(1.12) translateY(${y*0.18}px)`;
+},{passive:true});
+
+/* ---- lightbox ---- */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+function openLb(src){lbImg.src=src;lb.classList.add('open');document.body.style.overflow='hidden'}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow=''}
+document.querySelectorAll('[data-zoom]').forEach(el=>el.addEventListener('click',()=>openLb(el.dataset.zoom)));
+document.getElementById('lbClose').onclick=closeLb;
+lb.onclick=e=>{if(e.target===lb)closeLb()};
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeLb();if(mm.classList.contains('open'))closeMM()}});
+
+/* ---- reviews (looping marquee) ---- */
+const reviews=[
+  {n:'Κωνσταντίνος',t:'Εξαιρετική ψυχολόγος, καταρτισμένη και με κατανόηση.'},
+  {n:'Σταυρούλα',t:'Πήγα με πολύ άγχος, το οποίο έφυγε πολύ γρήγορα με τη συζήτησή μας.'},
+  {n:'Γεωργία',t:'Πρώτη μου φορά με ψυχολόγο και είχα απίστευτο στρες. Ο χώρος είναι ήρεμος με χαλαρή μουσική. Αφού τελείωσε η συνεδρία ένιωσα πολύ ανάλαφρη — νομίζω αυτό είναι και το νόημα!'},
+  {n:'Αναστασία',t:'Τη βρήκα πολύ φιλική, όμορφη και επαγγελματία. Φαίνεται ότι έχει εμπειρία.'},
+  {n:'Ανδρέας',t:'Ευγενέστατη, με πολλή προσοχή στην ακρόαση και στη διαχείριση.'},
+  {n:'Εύη',t:'Ένιωσα πολύ άνετα και λειτούργησε πολύ θετικά για εμένα.'},
+  {n:'Μαρία',t:'Υπήρξε συνέπεια στο ραντεβού. Έδειξε ανθρωπιά, κατανόηση και εμπειρία. Κατανόησε το πρόβλημά μου. Θα ξαναπάω.'},
+  {n:'Μαριλίνα',t:'Καταρτισμένη επιστήμονας με ενσυναίσθηση και κατανόηση. Ένιωσα από την πρώτη στιγμή άνετα. Έφυγα νιώθοντας ότι έγινε δουλειά από την πρώτη κιόλας μέρα!'},
+  {n:'Δήμητρα',t:'Είναι ευγενική, συνεπής και φαίνεται η εμπειρία της! Πάνω από όλα άνθρωπος με μεγάλη κατανόηση.'},
+  {n:'Ανδριάνα',t:'Σε κάνει να νιώθεις άνετα από την πρώτη στιγμή και σε καθοδηγεί πολύ σωστά. Σίγουρα θα ξαναπάω!'},
+  {n:'Δώρα',t:'Παρά πολύ καλή. Με βοήθησε πολύ και με έκανε να αισθανθώ εμπιστοσύνη.'},
+  {n:'Σωτηρία',t:'Πολύ καλή και καταρτισμένη ψυχολόγος. Ερεύνησε σε βάθος το πρόβλημά μου και με βοήθησε να βρω λύσεις.'},
+  {n:'Κώστας',t:'Φιλική, άνετη, ακούει προσεκτικά, νοιάζεται. Ανακουφίστηκα αρκετά.'},
+  {n:'Αμαλία',t:'Εξαιρετική, και παρότι ήταν το πρώτο ραντεβού με έκανε να ανοιχτώ και να της μιλήσω άνετα για τα πάντα!'}
+];
+const reviewsEN={
+  'Κωνσταντίνος':'An exceptional psychologist — knowledgeable and understanding.',
+  'Σταυρούλα':'I arrived very anxious, and the anxiety lifted quickly through our conversation.',
+  'Γεωργία':'My first time with a psychologist and I was incredibly stressed. The space is calm with soft music. After the session I felt so light — I think that\'s the whole point!',
+  'Αναστασία':'I found her very friendly, warm and professional. Her experience clearly shows.',
+  'Ανδρέας':'Most courteous, with great attention to listening and handling things.',
+  'Εύη':'I felt very comfortable and it worked very positively for me.',
+  'Μαρία':'She was punctual and showed humanity, understanding and experience. She understood my problem. I\'ll be back.',
+  'Μαριλίνα':'A skilled professional with empathy and understanding. I felt at ease from the first moment — and that real work had been done from day one!',
+  'Δήμητρα':'Kind, consistent and clearly experienced! Above all, a person with great understanding.',
+  'Ανδριάνα':'She makes you feel comfortable instantly and guides you so well. I\'ll definitely return!',
+  'Δώρα':'Wonderful. She helped me a lot and made me feel trust.',
+  'Σωτηρία':'A very good and well-trained psychologist. She explored my issue in depth and helped me find solutions.',
+  'Κώστας':'Friendly, easy-going, listens carefully, truly cares. I felt real relief.',
+  'Αμαλία':'Excellent — even on the first appointment she made me open up and talk freely about everything!'
+};
+const namesEN={'Κωνσταντίνος':'Konstantinos','Σταυρούλα':'Stavroula','Γεωργία':'Georgia','Αναστασία':'Anastasia','Ανδρέας':'Andreas','Εύη':'Evi','Μαρία':'Maria','Μαριλίνα':'Marilina','Δήμητρα':'Dimitra','Ανδριάνα':'Andriana','Δώρα':'Dora','Σωτηρία':'Sotiria','Κώστας':'Kostas','Αμαλία':'Amalia'};
+const star='<svg viewBox="0 0 24 24"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 18l-6.1 3 1.2-6.8-5-4.9 6.9-1z"/></svg>';
+function card(r){
+  const en=namesEN[r.n]||r.n;
+  return `<div class="rcard">
+    <div class="qmark">&ldquo;</div>
+    <p lang-el>${r.t}</p><p lang-en>${reviewsEN[r.n]}</p>
+    <div class="who"><div class="av">${r.n.charAt(0)}</div>
+      <div><b lang-el>${r.n}</b><b lang-en>${en}</b><span>${star}<span lang-el>Επαληθευμένη κριτική</span><span lang-en>Verified review</span></span></div>
+    </div></div>`;
+}
+const track=document.getElementById('revTrack');
+track.innerHTML=(reviews.map(card).join(''))+(reviews.map(card).join(''));
+setLang(document.documentElement.lang||'el');
+</script>
+</body>
+</html>
